@@ -140,6 +140,43 @@ python train_helmet_classifier_resnet18.py
 
 ---
 
+## 📊 Model Performance
+
+The ResNet-18 helmet classifier was trained for 15 epochs on an imbalanced dataset of cropped rider images.
+
+### Dataset
+
+| Class       | Train | Validation | Total |
+|------------|-------|------------|-------|
+| Helmet     | 3,533 | 884        | 4,417 |
+| NoHelmet   | 342   | 86         | 428   |
+| **Total**  | 3,875 | 970        | 4,845 |
+
+> Note: Dataset mainly contains riders viewed from behind. Performance may vary for front-facing riders.
+
+### Training & Validation Curves
+
+- **F1-score:**  
+  ![F1 Score](assets/f1.png)
+
+- **Loss:**  
+  ![Loss](assets/loss.png)
+
+### Best Epoch Performance
+
+| Metric               | Train | Validation |
+|---------------------|-------|------------|
+| F1-score (overall)   | 0.993 | 0.994      |
+| Recall (NoHelmet)    | 1.000 | 0.988      |
+| Loss                 | 0.0055| 0.0081     |
+
+**Notes:**
+
+- High recall on the **NoHelmet** class ensures correct violation detection.  
+- Validation metrics indicate strong generalization despite dataset imbalance.  
+- Training curves show stable convergence without overfitting.
+
+---
 ## 🧠 How It Works
 
 - YOLOv8 detects persons and motorcycles
