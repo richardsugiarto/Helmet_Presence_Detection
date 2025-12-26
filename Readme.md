@@ -172,9 +172,20 @@ python train_helmet_classifier_resnet18.py
 
 ---
 
+## 📚 Previous Work / Publication
+
+This project is an improved and optimized implementation of the approach presented in:
+
+**Helmet Usage Detection on Motorcyclist Using Deep Residual Learning**  
+Richard Sugiarto, Evan Kusuma Susanto, Yosi Kristian. Proceedings of the 2021 3rd East Indonesia Conference on Computer and Information Technology (EIConCIT), April 2021. [DOI](https://doi.org/10.1109/eiconcit50028.2021.9431914)
+
+> Note: This repo modernizes the original method by replacing sliding windows and multiple CNNs with a YOLOv8-based detector and a single ResNet-18 classifier for helmet detection, improving efficiency and multi-rider support.
+
+---
+
 ## ⚙️ Notes
 
-**Default paths:**
+**Default model & weight paths:**
 
 ```
 models/yolov8s.pt
