@@ -1,0 +1,75 @@
+# .gitignore for the helmet_presence project
+# Ignore Python bytecode, caches, and build artifacts
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+
+# Distribution / packaging
+build/
+dist/
+*.egg-info/
+*.egg
+pip-wheel-metadata/
+
+# Virtual environments (project contains a virtualenv in `helmet_presence/`)
+/helmet_presence/
+venv/
+.env/
+.venv/
+env/
+
+# Logs and temporary files
+*.log
+logs/
+*.tmp
+tmp/
+
+# Tests and coverage
+.pytest_cache/
+.coverage
+.coverage.*
+coverage.xml
+nosetests.xml
+
+# IDEs and editors
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# OS files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Jupyter
+.ipynb_checkpoints
+*.ipynb
+
+# Data, assets and large binaries (ignore datasets and generated outputs)
+/data/
+/runs/
+
+# Model weights and artifacts (common names in this repo)
+/models/*.pt
+/models/*.pth
+/weights/*.pt
+/weights/*.pth
+
+# Other potential large or secret files
+*.sqlite3
+*.db
+*.env
+.env.*
+*.pem
+*.key
+
+# Allow tracking of any small dedicated example files if desired (uncomment if needed)
+# !/data/.gitkeep
+# !/models/README.md
+
+# Helpful note:
+# If you already committed large files (models, datasets), remove them from the index with:
+# git rm --cached <path/to/file>
+# then commit and push. To purge large files from history consider using git filter-repo or git-filter-branch tools.
